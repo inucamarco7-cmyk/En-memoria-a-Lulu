@@ -1,0 +1,707 @@
+/*======================================================
+            ESTILOS GENERALES
+======================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(180deg,#081220,#102a43,#1c3d5a);
+    color:white;
+    line-height:1.8;
+}
+
+
+/*======================================================
+                    SCROLL
+======================================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#081220;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#5fa8ff;
+    border-radius:20px;
+}
+
+
+/*======================================================
+                    MENÚ
+======================================================*/
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    z-index:1000;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+
+}
+
+.logo{
+
+    font-size:30px;
+    color:#FFD166;
+
+    font-weight:bold;
+
+}
+
+nav ul{
+
+    display:flex;
+    list-style:none;
+
+}
+
+nav li{
+
+    margin-left:30px;
+
+}
+
+nav a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    transition:.4s;
+
+}
+
+nav a:hover{
+
+    color:#FFD166;
+
+}
+
+
+/*======================================================
+                    PORTADA
+======================================================*/
+
+.inicio{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px 60px;
+
+}
+
+.inicio img{
+
+    width:300px;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:8px solid white;
+
+    box-shadow:0 0 40px rgba(255,255,255,.35);
+
+    margin-bottom:30px;
+
+}
+
+.inicio h2{
+
+    font-size:50px;
+
+    color:#FFD166;
+
+    margin-bottom:15px;
+
+}
+
+.frase{
+
+    max-width:800px;
+
+    font-size:23px;
+
+    color:#e8f4ff;
+
+    font-style:italic;
+
+}
+
+
+/*======================================================
+            TARJETAS GENERALES
+======================================================*/
+
+.historia,
+.video,
+.galeria,
+.carta{
+
+    width:90%;
+    max-width:1100px;
+
+    margin:70px auto;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    padding:50px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.35);
+
+}
+
+.historia h2,
+.video h2,
+.galeria h2,
+.carta h2{
+
+    text-align:center;
+
+    color:#FFD166;
+
+    font-size:38px;
+
+    margin-bottom:25px;
+
+}
+
+
+/*======================================================
+                FRASE FINAL
+======================================================*/
+
+.frase-final{
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.frase-final h2{
+
+    font-size:35px;
+
+    color:#FFD166;
+
+    font-style:italic;
+
+}
+
+
+/*======================================================
+                    FOOTER
+======================================================*/
+
+footer{
+
+    background:#050b16;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+footer p{
+
+    margin:10px;
+
+    font-size:18px;
+
+}
+
+
+/*======================================================
+            RESPONSIVE
+======================================================*/
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+}
+
+nav li{
+
+margin:10px;
+
+}
+
+.logo{
+
+font-size:26px;
+
+}
+
+.inicio img{
+
+width:220px;
+height:220px;
+
+}
+
+.inicio h2{
+
+font-size:35px;
+
+}
+
+.frase{
+
+font-size:18px;
+
+}
+
+.historia,
+.video,
+.galeria,
+.carta{
+
+padding:30px;
+
+}
+
+}
+/*======================================================
+                    HISTORIA
+======================================================*/
+
+.historia p{
+
+    font-size:20px;
+
+    text-align:justify;
+
+    color:#f5f5f5;
+
+    line-height:2;
+
+}
+
+
+/*======================================================
+                    VIDEO
+======================================================*/
+
+.video{
+
+    text-align:center;
+
+}
+
+.video video{
+
+    width:100%;
+
+    max-width:850px;
+
+    border-radius:20px;
+
+    border:4px solid #FFD166;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
+
+    margin:25px 0;
+
+}
+
+.video p{
+
+    font-size:18px;
+
+    color:#dddddd;
+
+    max-width:800px;
+
+    margin:auto;
+
+}
+
+
+/*======================================================
+                    GALERÍA
+======================================================*/
+
+.contenedor-galeria{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    margin-top:30px;
+
+}
+
+
+/*======================================================
+                IMÁGENES
+======================================================*/
+
+.contenedor-galeria img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    border:3px solid rgba(255,255,255,.25);
+
+    transition:.4s;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.35);
+
+}
+
+
+/*======================================================
+            EFECTO AL PASAR EL MOUSE
+======================================================*/
+
+.contenedor-galeria img:hover{
+
+    transform:scale(1.05);
+
+    border-color:#FFD166;
+
+    box-shadow:0 0 25px rgba(255,209,102,.7);
+
+}
+
+
+/*======================================================
+            TÍTULOS DE SECCIÓN
+======================================================*/
+
+.historia h2,
+.video h2,
+.galeria h2{
+
+    position:relative;
+
+    display:inline-block;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding-bottom:12px;
+
+}
+
+
+/*======================================================
+        LÍNEA DECORATIVA DE LOS TÍTULOS
+======================================================*/
+
+.historia h2::after,
+.video h2::after,
+.galeria h2::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:4px;
+
+    background:#FFD166;
+
+    margin:12px auto 0;
+
+    border-radius:10px;
+
+}
+
+
+/*======================================================
+            EFECTO TARJETAS
+======================================================*/
+
+.historia:hover,
+.video:hover,
+.galeria:hover{
+
+    transform:translateY(-5px);
+
+    transition:.4s;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.45);
+
+}
+
+
+/*======================================================
+            RESPONSIVE
+======================================================*/
+
+@media(max-width:768px){
+
+    .historia p{
+
+        font-size:17px;
+
+    }
+
+    .video video{
+
+        border-width:2px;
+
+    }
+
+    .contenedor-galeria{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contenedor-galeria img{
+
+        height:220px;
+
+    }
+
+}
+/*======================================================
+                    CARTA
+======================================================*/
+
+.carta{
+
+    text-align:center;
+
+}
+
+.carta p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:2;
+
+    text-align:justify;
+
+    color:#f5f5f5;
+
+}
+
+
+/*======================================================
+                FRASE FINAL
+======================================================*/
+
+.frase-final{
+
+    padding:90px 20px;
+
+}
+
+.frase-final h2{
+
+    font-size:34px;
+
+    color:#FFD166;
+
+    text-align:center;
+
+    font-style:italic;
+
+    text-shadow:0 0 12px rgba(255,209,102,.4);
+
+}
+
+
+/*======================================================
+                    FOOTER
+======================================================*/
+
+footer{
+
+    margin-top:80px;
+
+    background:#040912;
+
+    padding:40px 20px;
+
+    text-align:center;
+
+    border-top:2px solid rgba(255,255,255,.08);
+
+}
+
+footer p{
+
+    color:#d8d8d8;
+
+    font-size:18px;
+
+    margin:8px;
+
+}
+
+footer strong{
+
+    color:#FFD166;
+
+}
+
+
+/*======================================================
+            FONDO CON ESTRELLAS
+======================================================*/
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(circle, rgba(255,255,255,.9) 1px, transparent 2px),
+
+    radial-gradient(circle, rgba(255,255,255,.6) 1px, transparent 2px),
+
+    radial-gradient(circle, rgba(255,255,255,.4) 1px, transparent 2px);
+
+    background-size:180px 180px, 260px 260px, 320px 320px;
+
+    background-position:0 0, 60px 90px, 120px 40px;
+
+    opacity:.35;
+
+    z-index:-1;
+
+}
+
+
+/*======================================================
+            SELECCIÓN DE TEXTO
+======================================================*/
+
+::selection{
+
+    background:#FFD166;
+
+    color:#081220;
+
+}
+
+
+/*======================================================
+            TRANSICIÓN GENERAL
+======================================================*/
+
+section,
+img,
+video,
+a{
+
+    transition:.35s;
+
+}
+
+
+/*======================================================
+            RESPONSIVE FINAL
+======================================================*/
+
+@media(max-width:768px){
+
+    .carta p{
+
+        font-size:17px;
+
+        text-align:left;
+
+    }
+
+    .frase-final h2{
+
+        font-size:26px;
+
+    }
+
+    footer p{
+
+        font-size:16px;
+
+    }
+
+}
